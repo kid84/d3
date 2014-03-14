@@ -19,6 +19,6 @@ class App < Sinatra::Base
     	haml:'index'
     end
     get '/style.css' do
-    	scss:'style'
+    	scss:'style',:style => :expanded,:line_comments => false,:cache=>false
     end
 end
