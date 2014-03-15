@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'compass'
+require 'mongo'
 
 class App < Sinatra::Base
 	register Sinatra::Reloader
