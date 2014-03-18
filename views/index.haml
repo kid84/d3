@@ -12,3 +12,18 @@
 			%h1 D3 test
 			#graph
 				%h1 graph
+			%test 
+				- @maildata.each do |i|
+					%p= i.data
+			%mmg 
+				%h1 GreenAnalyticsMailMagazine
+				%p メルマガ名
+				%p 日付
+				%p 送付数
+				%p 開封数
+				%p クリック数/PC
+				%p クリック数/Mobile
+				%p クリック率(送付)
+				%p クリック率(開封)
+				%p 気になる
+				%p 応募(通過)
