@@ -1,0 +1,41 @@
+/Users/hashikawatakuya/.rbenv/versions/2.1.0/bin/ruby extconf.rb 
+checking for random()... yes
+checking for srandom()... yes
+checking for rand()... yes
+checking for srand()... yes
+checking size of unsigned long... 8
+checking size of unsigned int... 4
+checking size of unsigned int... 4
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling amalloc.c
+compiling basename.c
+compiling Csio.c
+compiling css.c
+compiling docheader.c
+compiling dumptree.c
+compiling emmatch.c
+compiling flags.c
+compiling generate.c
+compiling github_flavoured.c
+compiling html5.c
+compiling markdown.c
+compiling mkdio.c
+compiling mktags.c
+compiling pgm_options.c
+compiling rdiscount.c
+compiling resource.c
+compiling setup.c
+compiling tags.c
+compiling toc.c
+compiling version.c
+compiling xml.c
+compiling xmlpage.c
+linking shared-object rdiscount.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rdiscount.bundle ./.gem.20140412-86122-8veixl
+installing default rdiscount libraries

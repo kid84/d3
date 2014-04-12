@@ -1,27 +1,22 @@
 require 'sinatra'
+require 'yaml'
+# require 'psych'
 require 'compass'
-require 'mongo'
-require 'nokogiri'
+# require 'mongo'
 require 'active_record'
 
-ActiveRecord::Base.establish_connection(
-    "adapter"=>"sqlite3",
-    "database"=>"./mmg.db"
-)
+# ActiveRecord::Base.establish_connection(
+#     "adapter"=>"sqlite3",
+#     "database"=>"./mmg.db"
+# )
+# ActiveRecord::Base.configurations = YAML.load_file('database.yml')
+# ActiveRecord::Base.establish_connection('development')
 
 class Maildata < ActiveRecord::Base
 end
 
 class App < Sinatra::Base
 	register Sinatra::Reloader
-    # register Sinatra::ActiveRecordExtension
-    # ActiveRecord::Base.establish_connection(
-    # "adapter"=>"sqlite3",
-    # "database"=>"./mmg.db"
-    # )
-
-    # class Maildata < ActiveRecord::Base
-    # end
 	
 	# Compassの設定
 	configure do
