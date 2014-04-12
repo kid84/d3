@@ -1,23 +1,10 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem "sinatra",require:"sinatra/base"
-gem "sinatra-contrib",require:"sinatra/contrib/all"
-
-gem "sqlite3"
-# gem "rake"
-gem "activerecord"
-# gem 'sinatra-activerecord'
-# gem "mongo"
-# gem "bson_ext"
-gem "haml"
-gem "sass"
-gem "compass"
-gem "coffee-script"
-# gem "nokogiri"
-# gem "rdiscount"
-
-group :develoopment do
-	gem "thin"
-end
-
+# gem "rails"
+gem "sinatra"
+gem 'activesupport', :require => 'active_support/all'
+gem 'activerecord'
+gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
+gem 'sqlite3'
+gem 'rake'

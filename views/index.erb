@@ -6,8 +6,13 @@
 </head>
 <body>
 	<h1>test</h1>
-	<% @maildata.each do |i|%>
-		<p><%= i.name%></p>
-	<%end%>
+	<table>
+		<% @test.each do |stu| %>
+		<tr>
+			<td><%= stu.id %></td>
+			<td><%= stu.name %></td>
+		</tr>
+		<% end %>
+	</table>
 </body>
 </html>
