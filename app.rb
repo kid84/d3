@@ -1,18 +1,19 @@
 require 'sinatra'
+require 'sqlite3'
 require 'yaml'
 # require 'psych'
 require 'compass'
 # require 'mongo'
 require 'active_record'
 
-# ActiveRecord::Base.establish_connection(
-#     "adapter"=>"sqlite3",
-#     "database"=>"./mmg.db"
-# )
+ActiveRecord::Base.establish_connection(
+    "adapter"=>"sqlite3",
+    "database"=>"d3data.db"
+)
 # ActiveRecord::Base.configurations = YAML.load_file('database.yml')
 # ActiveRecord::Base.establish_connection('development')
 
-class Maildata < ActiveRecord::Base
+class Post < ActiveRecord::Base
 end
 
 class App < Sinatra::Base
@@ -31,8 +32,12 @@ class App < Sinatra::Base
 
     #view部分
     get '/' do
-        @maildata = Maildata.all
-    	haml:index
+        @d3data = Post.all()
+    	haml:'index'
+    end
+    get '/test' do
+        @d3datas = Post.all()
+        erb:'index'
     end
     post '/new' do
         # Comment

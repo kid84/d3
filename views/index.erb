@@ -6,8 +6,9 @@
 </head>
 <body>
 	<h1>test</h1>
-	<% @maildata.each do |i|%>
-		<p><%= i.name%></p>
-	<%end%>
+	<% @d3datas.each do |d3data| %>
+		<p><%= d3data.name%></p>
+		<p><%= d3data.data%></p>
+	<% end %>
 </body>
 </html>

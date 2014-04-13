@@ -7,7 +7,7 @@ gem "sinatra-contrib",require:"sinatra/contrib/all"
 gem "sqlite3"
 # gem "rake"
 gem "activerecord"
-# gem 'sinatra-activerecord'
+gem 'sinatra-activerecord'
 # gem "mongo"
 # gem "bson_ext"
 gem "haml"
